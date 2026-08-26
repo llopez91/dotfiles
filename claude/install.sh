@@ -11,6 +11,14 @@ mkdir -p "$DEST"
 for d in "$SRC"/*/; do
     name="$(basename "$d")"
     link="$DEST/$name"
+
+    # Si lo que hay es un directorio real con un .env, rescatalo antes de
+    # borrarlo: es la unica copia de las llaves y no esta versionada.
+    if [ -d "$link" ] && [ ! -L "$link" ] && [ -f "$link/.env" ] && [ ! -f "${d}.env" ]; then
+        cp "$link/.env" "${d}.env"
+        echo "Rescued $name/.env into the repo (untracked)"
+    fi
+
     if [ -e "$link" ] || [ -L "$link" ]; then
         rm -rf "$link"
     fi

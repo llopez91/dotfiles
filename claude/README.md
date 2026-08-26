@@ -29,6 +29,10 @@ El instalador crea `skills/studio-creative/.env` a partir del `.env.example` si
 no existe. Ponle tu `KIE_API_KEY` antes de usar las etapas de IA del kit
 creativo.
 
+Si en `~/.claude/skills/` ya tienes la skill como directorio real y con un
+`.env` dentro, el instalador lo copia al repo antes de reemplazarla. El `.env`
+no se versiona, pero no se pierde.
+
 ## Skills
 
 ### Kit creativo
