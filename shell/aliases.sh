@@ -1,0 +1,45 @@
+#!/bin/bash
+# Shell aliases
+
+# Claude
+alias cl="claude --dangerously-skip-permissions"
+
+# Git
+alias g="git"
+alias gs="git status"
+alias ga="git add"
+alias gaa="git add -A"
+alias gp="git push"
+alias gl="git pull"
+alias gd="git diff"
+alias glog="git log --oneline --graph"
+alias gb="git branch"
+alias gco="git checkout"
+alias gsw="git switch"
+cm() { git commit -m "$*"; }
+cma() { git add -A && git commit -m "$*"; }
+
+# Node/npm
+alias nd="npm run dev"
+alias nb="npm run build"
+alias ns="npm start"
+alias ni="npm install"
+alias nt="npm test"
+
+# Ranger - cd on quit
+ranger-cd() {
+  local tmpfile="$(mktemp)"
+  ranger --choosedir="$tmpfile" "$@"
+  local dir="$(cat "$tmpfile")"
+  rm -f "$tmpfile"
+  [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
+}
+alias r="ranger-cd"
+
+# General
+alias c="clear"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ll="ls -la"
+alias la="ls -A"
+alias l="ls -CF"
