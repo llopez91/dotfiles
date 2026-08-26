@@ -1,0 +1,31 @@
+{
+  "id": "producto",
+  "nombre": "Producto / e-commerce",
+  "identity_lock": "libre",
+  "notas": "Valores de partida razonables, pendientes de afinar con fotos reales del rubro. wb_strength alto: en producto el color tiene que ser fiel al artículo real o generas devoluciones.",
+  "look": {
+    "wb_strength": 0.85,
+    "gamma_sombras": 1.20,
+    "contraste": 1.15,
+    "saturacion": 1.02,
+    "brillo": 1.08,
+    "enfoque": 1.40
+  },
+  "fondos": {
+    "blanco-puro": "Replace the background with a clean, pure white seamless studio backdrop, evenly lit with soft diffused light, with a subtle natural contact shadow directly beneath the product so it sits on the surface instead of floating. No gradients, no texture, no props.",
+    "gris-estudio": "Replace the background with a smooth neutral light-grey seamless studio backdrop with a gentle vertical gradient, softly lit, with a natural soft shadow beneath the product.",
+    "podio-minimal": "Replace the background with a minimal studio scene: a simple neutral podium or plinth in soft matte tones under clean diffused lighting, with a plain gradient wall behind and a soft realistic shadow under the product.",
+    "oscuro-premium": "Replace the background with a deep dark seamless backdrop lit with a single soft directional key and a subtle rim light along the edge of the product, in the style of premium product photography. Keep the surface reflective enough to give a faint natural reflection beneath the product."
+  },
+  "escenas": {
+    "lanzamiento": "Place the product in a premium launch scene with dramatic directional lighting, a clean minimal environment and generous empty space around it for a headline.",
+    "estilo-de-vida": "Place the product in a tasteful lifestyle setting appropriate to its category, with the environment rendered softly out of focus so the product remains unmistakably the subject."
+  },
+  "formatos": ["ig-square", "ig-feed", "wide"],
+  "copy": {
+    "tono": "claro y concreto; beneficio primero, característica después; sin exageraciones vacías",
+    "emojis": false,
+    "hashtags_base": ["#producto", "#tienda", "#nuevo", "#calidad"],
+    "cta_ejemplos": ["Cómpralo ahora", "Envíos a todo el país", "Últimas unidades", "Ver más"]
+  }
+}

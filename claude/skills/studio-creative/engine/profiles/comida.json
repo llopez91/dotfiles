@@ -1,0 +1,31 @@
+{
+  "id": "comida",
+  "nombre": "Comida / restaurante",
+  "identity_lock": "libre",
+  "notas": "Valores de partida razonables, pendientes de afinar con fotos reales del rubro. wb_strength deliberadamente bajo: en comida el tinte cálido es apetecible y corregirlo del todo enfría el plato.",
+  "look": {
+    "wb_strength": 0.35,
+    "gamma_sombras": 1.22,
+    "contraste": 1.12,
+    "saturacion": 1.14,
+    "brillo": 1.10,
+    "enfoque": 1.35
+  },
+  "fondos": {
+    "mesa-rustica": "Replace the background and surface around the dish with a clean rustic dark wood table, softly lit from the upper left with warm natural window light, with a gentle falloff into shadow at the edges of the frame. Remove all clutter, cables, packaging and background distractions.",
+    "marmol-claro": "Replace the background and surface around the dish with a clean light marble surface under soft bright diffused daylight, with a plain out-of-focus pale wall behind. Keep everything minimal, airy and free of clutter.",
+    "restaurante-bokeh": "Rebuild the background as a warm, upscale restaurant interior rendered completely out of focus: soft amber pendant lights and glowing highlights, no legible detail, no people, no clutter. Keep the dish itself sharp and clearly the brightest element in the frame.",
+    "fondo-oscuro": "Replace the background with a deep dark slate surface and backdrop, lit with a single soft directional light that grazes across the food to bring out its texture, falling off into rich shadow at the edges."
+  },
+  "escenas": {
+    "promo": "Place the dish in an appetising advertising scene: warm directional light, fresh raw ingredients scattered artfully out of focus in the background, steam or freshness cues where appropriate, and a clean uncluttered composition.",
+    "menu-nuevo": "Place the dish on a clean, elegant surface with generous empty space around it, lit brightly and evenly, in the style of a menu launch announcement."
+  },
+  "formatos": ["ig-feed", "story", "ig-square"],
+  "copy": {
+    "tono": "apetitoso y sensorial; describe sabor y textura antes que precio; frases cortas; invita a venir hoy",
+    "emojis": true,
+    "hashtags_base": ["#comida", "#foodie", "#restaurante", "#delicioso", "#foodporn"],
+    "cta_ejemplos": ["Pide el tuyo", "Reserva mesa", "Solo por hoy", "Ven a probarlo"]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "inmobiliaria",
+  "nombre": "Inmobiliaria / espacios",
+  "identity_lock": "libre",
+  "notas": "Valores de partida razonables, pendientes de afinar con fotos reales del rubro. gamma_sombras alto porque los interiores llegan casi siempre subexpuestos frente a las ventanas.",
+  "look": {
+    "wb_strength": 0.75,
+    "gamma_sombras": 1.35,
+    "contraste": 1.08,
+    "saturacion": 1.05,
+    "brillo": 1.10,
+    "enfoque": 1.20
+  },
+  "fondos": {
+    "luz-natural": "Keep the room exactly as it is but rebuild the lighting as bright, clean natural daylight coming through the windows: lift the interior shadows, balance the exposure between the interior and the view outside the windows, remove the yellow-green cast of the indoor bulbs, and make the whites of the walls and ceiling read as genuinely white. Do not add, remove, move or restyle any furniture, fixture or architectural element.",
+    "cielo-limpio": "Keep the property exactly as it is but replace the flat or overcast sky with a clean, bright blue sky with soft natural clouds, and relight the facade to match that new sky with warm natural sunlight. Do not alter the building itself, its proportions, its colour or any architectural detail.",
+    "atardecer": "Keep the property exactly as it is but relight the scene as a warm golden-hour twilight: a deep blue-to-amber sky, warm light glowing from the interior windows, and soft warm light grazing the facade. Do not alter the building itself in any way."
+  },
+  "escenas": {
+    "promo": "Present the property in a polished real-estate advertising composition with bright even lighting, a clean uncluttered frame and generous empty space at one side for a headline and price."
+  },
+  "formatos": ["ig-feed", "story", "wide"],
+  "copy": {
+    "tono": "informativo y aspiracional a partes iguales; datos concretos (m2, habitaciones, zona) antes que adjetivos",
+    "emojis": false,
+    "hashtags_base": ["#inmobiliaria", "#casaenventa", "#bienesraices", "#hogar"],
+    "cta_ejemplos": ["Agenda una visita", "Escríbenos", "Más información", "Disponible ahora"]
+  }
+}

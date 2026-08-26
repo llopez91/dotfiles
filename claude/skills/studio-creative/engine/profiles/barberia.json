@@ -1,0 +1,32 @@
+{
+  "id": "barberia",
+  "nombre": "Barbería / peluquería",
+  "identity_lock": "estricto",
+  "notas": "Look validado el 2026-08-14 contra la foto de referencia. El cliente tiene que reconocerse y el corte que se muestra tiene que ser el corte que se hizo: por eso identity_lock estricto no es negociable en este rubro.",
+  "look": {
+    "wb_strength": 0.6,
+    "gamma_sombras": 1.30,
+    "contraste": 1.10,
+    "saturacion": 1.06,
+    "brillo": 1.06,
+    "enfoque": 1.25
+  },
+  "fondos": {
+    "estudio-oscuro": "Replace everything behind the subject with one continuous, clean, seamless dark charcoal-grey photographic studio backdrop. Add a soft warm radial glow positioned behind and slightly above the subject's head to separate them from the backdrop, with smooth natural falloff into deeper grey toward the edges of the frame.",
+    "estudio-claro": "Replace everything behind the subject with one continuous, clean, seamless light warm-grey photographic studio backdrop, evenly lit and slightly brighter behind the subject's head, falling off gently to a soft mid-grey at the edges of the frame. Keep the backdrop completely plain, with no props, texture or visible seams.",
+    "barberia-bokeh": "Rebuild the background as a real barbershop interior rendered as a tasteful, deliberately out-of-focus bokeh: warm amber tungsten practical lights, soft glowing highlights, the suggestion of a mirror and a barber chair, with every distracting object, sign and clutter removed. Keep the background considerably darker than the subject so they stand out clearly.",
+    "degradado-negro": "Replace everything behind the subject with a deep near-black background carrying a single soft directional gradient from the upper left, like a low-key studio wall. Keep it absolutely clean and free of any object, texture or detail."
+  },
+  "escenas": {
+    "promo": "Place the subject in a premium barbershop advertising scene: a dark, moody, high-end barbershop interior with warm amber lighting, polished dark wood and subtle brass detail, all rendered with a shallow depth of field so the environment reads as an elegant blur behind the subject.",
+    "antes-despues": "Place the subject against a clean split-tone studio background designed for a before-and-after post: a deep charcoal panel behind the subject with a subtle vertical light separation, leaving a clean band of space at one side of the frame.",
+    "temporada": "Place the subject in a warm, festive barbershop scene with soft golden string lights blurred deep in the background, keeping the mood premium and understated rather than cluttered or kitsch."
+  },
+  "formatos": ["ig-feed", "story", "ig-square"],
+  "copy": {
+    "tono": "cercano, directo y orgulloso del oficio; habla de tú; frases cortas; nada de lenguaje corporativo",
+    "emojis": true,
+    "hashtags_base": ["#barberia", "#barbershop", "#fade", "#cortedepelo", "#barber", "#barberlife"],
+    "cta_ejemplos": ["Agenda tu cita", "Reserva por WhatsApp", "Cupos esta semana", "Pasa por el local"]
+  }
+}

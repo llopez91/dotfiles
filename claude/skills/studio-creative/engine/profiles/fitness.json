@@ -1,0 +1,30 @@
+{
+  "id": "fitness",
+  "nombre": "Gimnasio / entrenamiento",
+  "identity_lock": "estricto",
+  "notas": "Valores de partida razonables, pendientes de afinar con fotos reales del rubro. identity_lock estricto: hay personas reales y además retocar el cuerpo de un cliente sin permiso es una línea que no se cruza.",
+  "look": {
+    "wb_strength": 0.6,
+    "gamma_sombras": 1.22,
+    "contraste": 1.20,
+    "saturacion": 1.05,
+    "brillo": 1.04,
+    "enfoque": 1.35
+  },
+  "fondos": {
+    "gimnasio-oscuro": "Rebuild the background as a dark, modern gym interior rendered with a shallow depth of field: matte black equipment, subtle cool highlights and a few soft out-of-focus light sources, with all clutter, signage and bystanders removed. Keep the background clearly darker than the subject.",
+    "estudio-oscuro": "Replace everything behind the subject with a clean seamless dark charcoal backdrop lit with a hard directional key from one side and a crisp cool rim light from behind, in the style of athletic editorial photography.",
+    "humo-dramatico": "Replace the background with a dark atmospheric backdrop with soft haze catching a single hard beam of light behind the subject, creating strong separation and a dramatic athletic mood. Keep it clean and free of any object or clutter."
+  },
+  "escenas": {
+    "promo": "Place the subject in a dramatic gym advertising scene with hard directional lighting, deep shadows, an atmospheric dark interior far out of focus, and clean negative space for a headline.",
+    "reto": "Place the subject against a bold, high-contrast dark backdrop designed for a challenge or transformation announcement, with a wide clean band of empty space on one side of the frame."
+  },
+  "formatos": ["ig-feed", "story"],
+  "copy": {
+    "tono": "energético y retador pero nunca culpabilizante; habla de constancia y progreso, no de vergüenza corporal",
+    "emojis": true,
+    "hashtags_base": ["#gym", "#entrenamiento", "#fitness", "#disciplina", "#constancia"],
+    "cta_ejemplos": ["Empieza hoy", "Primera clase gratis", "Únete al reto", "Reserva tu cupo"]
+  }
+}
