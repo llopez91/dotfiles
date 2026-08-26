@@ -125,6 +125,42 @@ Se enlazan solas a `~/.claude/skills/` cuando instalas la herramienta dueña.
 | Descubrimiento | `find-skills` | Ecosistema abierto de agent skills |
 | Otras | `interface-design` | — |
 
+### Strix — pentesting (pendiente de instalar)
+
+[Strix](https://github.com/usestrix/strix) es una herramienta open source de
+pentesting con agentes. Trae nueve skills que se instalan de un jalón:
+
+```bash
+npx skills add usestrix/strix
+```
+
+| Skill | Qué hace |
+|-------|----------|
+| `penetration-testing-with-strix` | Corre escaneos headless con el CLI local y lee los resultados |
+| `managed-pentesting-with-strix` | Usa la plataforma [app.strix.ai](https://app.strix.ai) por REST, sin Docker ni llave de LLM |
+| `fix-security-vulnerabilities-with-strix` | Remedia los hallazgos y vuelve a escanear para verificar |
+| `ci-security-scanning-with-strix` | Escaneo de PRs en CI |
+| `application-security-testing` | Flujo por objetivo: aplicación |
+| `web-app-penetration-testing` | Flujo por objetivo: app web |
+| `api-security-testing` | Flujo por objetivo: API |
+| `owasp-top-10-testing` | Flujo por objetivo: OWASP Top 10 |
+| `find-security-vulnerabilities-in-code` | Revisión de código en busca de vulnerabilidades |
+
+Para el CLI local hace falta **Docker corriendo** y una llave de LLM:
+
+```bash
+curl -sSL https://strix.ai/install | bash
+export STRIX_LLM="anthropic/claude-opus-5"
+export LLM_API_KEY="tu-llave"
+strix --target ./mi-app
+```
+
+Los resultados quedan en `strix_runs/<nombre>`. La variante `managed-*` no
+necesita nada local. Los identificadores de modelo válidos están en
+[docs.strix.ai](https://docs.strix.ai/llm-providers/overview).
+
+> Úsala solo contra código y objetivos propios o con autorización explícita.
+
 ### Sueltas
 
 `drawio` y `playwright-cli` están instaladas a mano en `~/.claude/skills/` y no
