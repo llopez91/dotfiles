@@ -1,0 +1,18 @@
+# Secretos
+.env
+.env.local
+*.key
+
+# Python
+__pycache__/
+*.pyc
+
+# Salidas generadas
+out/
+
+# Sistema
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
