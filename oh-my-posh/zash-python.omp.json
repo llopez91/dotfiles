@@ -38,7 +38,7 @@
           "foreground": "#FFD43B",
           "style": "plain",
           "options": {
-            "display_mode": "context",
+            "display_mode": "environment",
             "fetch_virtual_env": true,
             "fetch_version": true
           },

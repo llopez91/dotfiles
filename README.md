@@ -44,9 +44,17 @@ del intérprete.
 @llope ➜ mi-proyecto git(main)   .venv 3.14.4
 ```
 
-El segmento aparece solo cuando hay contexto de Python — un venv activo o
-archivos `.py` en la carpeta. Con el venv activo muestra su nombre; sin él, solo
-la versión.
+El segmento aparece **solo con un entorno virtual activo**. En una carpeta con
+archivos `.py` pero sin venv no muestra nada, para no ensuciar el prompt.
+
+Eso lo controla `display_mode` en el segmento `python` del tema:
+
+| Valor | Cuándo aparece |
+|-------|----------------|
+| `environment` | solo con venv activo (el que usa este tema) |
+| `context` | con venv activo **o** archivos `.py` en la carpeta |
+| `files` | solo con archivos `.py` |
+| `always` | siempre |
 
 ```powershell
 cd dotfiles/oh-my-posh
