@@ -87,6 +87,34 @@ Terminal, el `face` del perfil.
 Por eso aquí VS Code usa `JetBrainsMono NFM` y Windows Terminal se queda con
 `0xProto Nerd Font`.
 
+### VS Code no ve una fuente recién instalada
+
+Si instalaste la fuente con VS Code abierto, **no la va a encontrar aunque
+recargues la ventana**. VS Code corre sobre Chromium, que enumera las fuentes
+del sistema al arrancar el proceso y las cachea; `Developer: Reload Window`
+solo reinicia el renderizado, no esa caché.
+
+Ciérralo del todo y vuelve a abrirlo. Que no quede ningún proceso:
+
+```powershell
+Get-Process Code -ErrorAction SilentlyContinue | Measure-Object | Select-Object -ExpandProperty Count
+```
+
+Para probar el glifo aislado, sin depender del prompt:
+
+```powershell
+"fae=`u{E235} dev=`u{E73C} seti=`u{E606}"
+```
+
+Tres iconos de Python significa que la fuente cargó. Si siguen saliendo cajas
+con la fuente correcta y VS Code reiniciado, prueba
+`terminal.integrated.gpuAcceleration: "off"` — el renderer WebGL cachea el
+atlas de glifos.
+
+Evita listar fuentes de respaldo en `terminal.integrated.fontFamily`. Chromium
+hace fallback por carácter y con codepoints del Área de Uso Privado a veces se
+salta la primaria y cae a una sin glifos.
+
 ## Scripts
 
 | Script | Descripción |
