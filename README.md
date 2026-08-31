@@ -5,6 +5,7 @@ Configuración personal y skills de Claude Code, para Windows y Linux/macOS.
 | Carpeta | Qué hay |
 |---------|---------|
 | [claude/](claude/) | Skills propias de Claude Code y su instalador |
+| [oh-my-posh/](oh-my-posh/) | Tema del prompt, con segmento de Python y venv |
 | [scripts/](scripts/) | Scripts de mantenimiento del sistema |
 | [shell/](shell/) | Aliases para bash/zsh y PowerShell |
 
@@ -33,6 +34,41 @@ hay privilegios). El repo queda como la única copia.
 
 > El kit creativo necesita una `KIE_API_KEY` en `claude/skills/studio-creative/.env`.
 > El instalador crea el archivo a partir del `.env.example`; solo pon la llave.
+
+## Oh My Posh
+
+Tema `zash` con un segmento de Python añadido: icono, nombre del venv y versión
+del intérprete.
+
+```
+@llope ➜ mi-proyecto git(main)   .venv 3.14.4
+```
+
+El segmento aparece solo cuando hay contexto de Python — un venv activo o
+archivos `.py` en la carpeta. Con el venv activo muestra su nombre; sin él, solo
+la versión.
+
+```powershell
+cd dotfiles/oh-my-posh
+.\install.ps1
+```
+
+Apunta los perfiles de PowerShell 7 y Windows PowerShell 5.1 al tema local
+(guarda un `.bak` de cada uno) y comenta cualquier `oh-my-posh init` previo. Al
+ser local, el prompt ya no se descarga en cada arranque.
+
+### Los iconos salen como cuadros
+
+Falta una Nerd Font en la terminal. Instálala y ponla en **las dos** partes: la
+terminal y VS Code.
+
+```powershell
+oh-my-posh font install 0xProto
+```
+
+En VS Code, `terminal.integrated.fontFamily`. En Windows Terminal, el `face` del
+perfil. Si la fuente que nombras ahí no está instalada, el terminal cae a una
+sin glifos y no ves ningún icono.
 
 ## Scripts
 
