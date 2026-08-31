@@ -52,12 +52,19 @@ foreach ($hive in @("HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts",
     $key = Get-ItemProperty $hive -ErrorAction SilentlyContinue
     if ($key) { $fonts += $key.PSObject.Properties.Name }
 }
-if (-not ($fonts | Where-Object { $_ -match "Nerd Font|NF " })) {
+if (-not ($fonts | Where-Object { $_ -match "Nerd Font|NF |NFM " })) {
     Write-Host ""
     Write-Host "No hay ninguna Nerd Font instalada: los iconos saldran como cuadros." -ForegroundColor Yellow
-    Write-Host "  oh-my-posh font install 0xProto" -ForegroundColor Yellow
-    Write-Host "Luego ponla como fuente en tu terminal y en VS Code" -ForegroundColor Yellow
-    Write-Host "  (terminal.integrated.fontFamily)." -ForegroundColor Yellow
+    Write-Host "  oh-my-posh font install JetBrainsMono" -ForegroundColor Yellow
+    Write-Host "Luego ponla como fuente en tu terminal y en VS Code." -ForegroundColor Yellow
+    Write-Host "Usa la variante Mono (NFM): la NF tiene iconos de doble ancho y" -ForegroundColor Yellow
+    Write-Host "estira la rejilla del terminal de VS Code." -ForegroundColor Yellow
+}
+elseif (-not ($fonts | Where-Object { $_ -match "NFM " })) {
+    Write-Host ""
+    Write-Host "Tienes Nerd Font pero no la variante Mono (NFM)." -ForegroundColor Yellow
+    Write-Host "En VS Code las letras saldran espaciadas. Instala:" -ForegroundColor Yellow
+    Write-Host "  oh-my-posh font install JetBrainsMono" -ForegroundColor Yellow
 }
 
 Write-Host ""

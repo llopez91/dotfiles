@@ -57,18 +57,35 @@ Apunta los perfiles de PowerShell 7 y Windows PowerShell 5.1 al tema local
 (guarda un `.bak` de cada uno) y comenta cualquier `oh-my-posh init` previo. Al
 ser local, el prompt ya no se descarga en cada arranque.
 
-### Los iconos salen como cuadros
-
-Falta una Nerd Font en la terminal. Instálala y ponla en **las dos** partes: la
-terminal y VS Code.
+### Fuentes: la variante importa
 
 ```powershell
-oh-my-posh font install 0xProto
+oh-my-posh font install JetBrainsMono
 ```
 
-En VS Code, `terminal.integrated.fontFamily`. En Windows Terminal, el `face` del
-perfil. Si la fuente que nombras ahí no está instalada, el terminal cae a una
-sin glifos y no ves ningún icono.
+Cada Nerd Font se instala en tres variantes, y **no son intercambiables**:
+
+| Familia | Iconos | Para qué |
+|---------|--------|----------|
+| `JetBrainsMono NF` | doble ancho | editores, no terminales |
+| `JetBrainsMono NFM` | **una celda** | **terminales** |
+| `JetBrainsMono NFP` | proporcional | texto |
+
+Dónde se configura: en VS Code, `terminal.integrated.fontFamily`; en Windows
+Terminal, el `face` del perfil.
+
+**Dos síntomas, dos causas distintas:**
+
+- **Los iconos salen como cuadros vacíos (□)** — la fuente que nombraste no está
+  instalada, o no es una Nerd Font. El terminal cae a otra sin glifos.
+- **Las letras salen espaciadísimas** (`c u r r e n c y`) — estás usando la
+  variante `NF` en vez de `NFM`. El terminal de VS Code mide el ancho de celda a
+  partir de la fuente, y los iconos de doble ancho le estiran toda la rejilla.
+  Windows Terminal no sufre esto porque hace su propio layout, así que la misma
+  fuente puede verse bien ahí y fatal en VS Code.
+
+Por eso aquí VS Code usa `JetBrainsMono NFM` y Windows Terminal se queda con
+`0xProto Nerd Font`.
 
 ## Scripts
 
